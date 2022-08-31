@@ -1,4 +1,5 @@
-# 1. Utwórz plik .env z konfiuracją
+# 1. Utwórz plik .env z konfiuracją w głownym katalogu
+showapp/.env
 
 .env sample
 
@@ -10,11 +11,27 @@
     RECAPTCHA_PUBLIC_KEY=xyz
     RECAPTCHA_PRIVATE_KEY=xyz
 
-# 2. Utwórz DB
+# 2 Będziesz potrzebował PIPENV
+    https://pypi.org/project/pipenv/
+    pip install pipenv
+
+# 3. Uruchom pipenv
+
+    pipenv shell
+
+# 4. SYNC pypi 
+
+    pipenv sync
+
+# 5 Utwórz DB
 
     flask db upgrade
 
-# 3. uruchom lokalnie
+# 6. uruchom lokalnie
 
     python3 run.py
 
+
+# 7. Korzystaj z localhost:5000 aby sprawdzić działanie recaptcha
+
+    localhost:5000
