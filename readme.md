@@ -1,7 +1,5 @@
 # 1. Utwórz plik .env z konfiuracją w głownym katalogu
-showapp/.env
-
-.env sample
+e.g. showapp/.env
 
     FLASK_DEBUG=True
     FLASK_APP=core
