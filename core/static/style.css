@@ -1,0 +1,155 @@
+/* 
+yellow #FECD46
+green ##1c7961
+black black
+*/
+
+* {
+    font-family: 'Open Sans', sans-serif!important;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif!important;
+}
+
+.bangers {
+    font-family: 'Bebas Neue', cursive!important;
+}
+
+.toast {
+    opacity: 1 !important;
+    box-shadow: none !important;
+}
+
+.toast-container{
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.material-ico {
+    font-family: 'Material Icons'!important;
+}
+
+.bg-yellow {
+    background-color: #FECD46!important;
+}
+
+.title {
+    font-size: 55px;
+}
+
+.title-yellow {
+    text-shadow: 5px 5px 0px #FECD46;
+}
+
+.y-center {
+    vertical-align:middle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.y-center-left {
+    vertical-align:middle;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.x-center{
+    margin: auto;
+}
+
+
+
+.btn-custom-yellow, .btn-custom-yellow:hover {
+    text-decoration: none;
+    border: none;
+    font-weight: bold;
+    padding: 8px;
+    border-radius: 8px;
+    color: black!important;
+    background-color: #FECD46;
+    display: block;
+}
+
+.btn-custom-yellow-auth{
+    text-decoration: none;
+    border: none;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 10px;
+    color: black!important;
+    background-color: #FECD46;
+    display: block;
+    width: 100%;
+    margin-top: 7px;
+}
+
+.btn-custom-white-link {
+    text-decoration: none;
+    border: none;
+    font-weight: bold;
+    padding: 8px;
+    border-radius: 8px;
+    color: white!important;
+    background-color: none;
+    display: block;
+}
+
+.btn-custom-black-link {
+    text-decoration: none;
+    border: none;
+    font-weight: bold;
+    padding: 8px;
+    border-radius: 8px;
+    color: black!important;
+    background-color: none;
+    display: block;
+}
+
+.btn-custom-white-link:hover, .btn-custom-black-link:hover{
+    text-decoration: underline;
+}
+
+
+.auth-form-container {
+    height: 100vh;
+    width: 100vw;
+}
+
+.none {
+    display: none;
+}
+
+.auth-input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 7px;
+    border-radius: 10px;
+    border: 1px solid black;
+    font-size: 20px;
+}
+
+.input-description{
+    text-align: left!important;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 7px;
+}
+
+.cookie-container {
+    position: fixed;
+    padding: 15px;
+    right: 20px;
+    bottom: 20px;
+    background-color: white;
+    max-width: 80vw;
+    font-family: 'Open Sans', sans-serif!important;
+    border: 1px solid black;
+}
+
+.request-item {
+    cursor: pointer !important;;
+}

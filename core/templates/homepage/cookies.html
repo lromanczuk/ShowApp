@@ -1,0 +1,16 @@
+<div class="cookie-container rounded">
+
+    <div class="fw-bold">
+        Korzystając z serwisu zgadzasz się na 
+        <a href="#" target="_blank">Politykę prywatności</a>
+        oraz nasz <a href="#" target="_blank">Regulamin</a> 
+        <!-- TODO: regulaminy i w  regulaminie powinno byc info o captcha https://policies.google.com/privacy?hl=pl i  https://policies.google.com/terms?hl=pl-->
+    
+    </div>
+
+    <div class="mt-2 text-end">
+        <a href="about:blank"  type="button" class="btn btn-light m-2 fw-bold" onclick="return confirm('Czy jesteś pewny?')">Wychodzę z serwisu</a>
+        <button type="button" class="btn fw-bold bg-yellow" hx-get="{{url_for('homepage.cookies_info')}}" hx-trigger="click" hx-target="#cookie" hx-swap="innerHTML">Zgadzam się</button>
+    </div>
+    
+</div>

@@ -1,0 +1,19 @@
+<div class="row">
+    
+    <div class="col-6 col-md-2 p-2">
+        <a class="settings-tile fw-bold rounded p-3" href="{{url_for('auth.logout')}}" onclick="if (!confirm('Are you sure?')) return false;">
+            <span class="material-ico fs-1">logout</span> <br>
+            Wyloguj się
+        </a>
+    </div>
+
+    <div class="col-6 col-md-2 p-2">
+        <div class="settings-tile fw-bold rounded p-3 request-item"
+            hx-get="{{url_for('settings.change_password')}}" hx-indicator="#indicator" hx-target="#panel-content" hx-swap="innerHTML">
+            <span class="material-ico fs-1">lock_reset</span> <br>
+            Zmień hasło
+        </div>
+    </div>
+
+
+</div>

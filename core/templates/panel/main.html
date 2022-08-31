@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% block code %}
+
+<div class="bg-dark">
+    <nav class="navbar navbar-dark navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold fs-2 y-center text-white" href="{{ url_for('panel.main') }}">
+                <span class="material-ico fs-1">sports_gymnastics</span>
+                NoteGym 
+            </a>
+
+            <div class="d-flex">
+                <ul class="navbar-nav me-auto  mb-lg-0 w-100">
+                    <li class="nav-item m-3 text-center request-item">
+                        <div class="nav-link active btn-custom-yellow fs-5 " 
+                        hx-get="{{url_for('settings.menu')}}" hx-indicator="#indicator" hx-target="#panel-content" hx-swap="innerHTML"></a>
+                            <span class="material-ico fs-3 p-2">person</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</div>
+
+<div id="indicator" class="htmx-indicator">
+    <div class="indicator-bar animate__animated animate__fadeInLeft animate__infinite "></div>
+</div>
+
+
+<div class="px-4 bg-light">
+    <div class="row">
+        <div class="col-12">
+            <div id="panel-content">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="spacer"></div>
+
+<div class="menu">
+<!-- menu -->
+    <div class="px-4  pb-2">
+        <div class="row">
+            <div class="col-4">
+                <div  class="menu-link request-item rounded bg-dark"
+                    hx-get="{{url_for('panel.training')}}" hx-indicator="#indicator" hx-target="#panel-content" hx-swap="innerHTML">
+                    <span class="material-ico">fitness_center</span>
+                </div>
+            </div>
+            <div class="col-4">
+                <div href="#" class="menu-link request-item rounded bg-dark"
+                hx-get="{{url_for('panel.meals')}}" hx-indicator="#indicator" hx-target="#panel-content" hx-swap="innerHTML"
+                ><span class="material-ico">restaurant</span></div>
+            </div>
+            <div class="col-4">
+                <div href="#" class="menu-link request-item rounded bg-dark menu-link-active"><span class="material-ico">query_stats</span></div>
+            </div>
+        </div>
+    </div>
+<!-- end menu -->
+</div>
+
+<!-- load on start -->
+<div hx-get="{{url_for('settings.menu')}}" hx-indicator="#indicator" hx-target="#panel-content" hx-swap="innerHTML" hx-trigger="load"></div>
+
+
+
+{% endblock %}

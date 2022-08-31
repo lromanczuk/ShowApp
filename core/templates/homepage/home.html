@@ -1,0 +1,213 @@
+{% extends 'base.html' %}
+{% block code %}
+
+    {% include 'homepage/navbar.html' %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 title text-center mt-5 bangers">
+                <div class="bangers">
+                Twoja
+                Dieta i Trening  
+                </div>
+                <div class="title-yellow bangers">
+                    w NoteGym
+                </div>
+                
+            </div>
+
+        </div>
+        
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-5 mt-3 bangers fs-2 text-center y-center">
+                <div class="fs-1 bangers ">
+                    Osiągaj swoje cele
+                    Samodzielnie<br>
+                    lub <br>
+                    z pomocą Trenera<br>
+                    
+                </div>
+            </div>
+
+            <div class="col-md-5 mt-3 bangers fs-2 text-center y-center">
+                <span id="ico0" class="material-ico  animate__animated" style="font-size: 244px;margin:-50px;">query_stats</span>
+                <span id="ico1" class="material-ico none animate__animated " style="font-size: 244px;margin:-50px;">sports_gymnastics</span>
+                <span id="ico2" class="material-ico none animate__animated " style="font-size: 244px;margin:-50px;">fitness_center</span>
+                <span id="ico3" class="material-ico none animate__animated " style="font-size: 244px;margin:-50px;">restaurant</span>
+                
+            </div>
+
+            <div class="col-md-1"></div>
+
+            <div class="col-md-3"></div>
+            <div class="col-md-6 mt-5 text-center">
+                <a class="btn-custom-black fs-2 btn-custom-yellow" aria-current="page" href="#">Dołącz za darmo!</a>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+
+        <div class="row mb-5">
+        </div>
+
+
+        <div class="row">
+            <div class="col-12 mt-5">
+                <div class="bangers fs-1 text-center">
+                    Najszybsza droga to twoich efektów
+                </div>
+            </div>
+
+            <div class="col-lg-6   p-3">
+                <div class="bg-white h-100 rounded p-4">
+                    <div class="fs-3 text-center fw-bold">
+                        Arkusze, Excel, Word, Notesy
+                    </div>
+                    <div>
+
+                        <div class="y-center-left">
+                            <span class="material-ico fs-1 text-danger">close</span>
+                            <span class="fs-4">Utrudniona obserwacja</span>
+                        </div>
+                        
+                        <div class="y-center-left">
+                            <span class="material-ico fs-1 text-danger">close</span>
+                            <span class="fs-4">Brak statystyk</span>
+                        </div>
+                        
+                        <div class="y-center-left">
+                            <span class="material-ico fs-1 text-danger">close</span>
+                            <span class="fs-4">Trudne układanie jadłospisów</span>
+                        </div>
+
+                        <div class="y-center-left">
+                            <span class="material-ico fs-1 text-danger">close</span>
+                            <span class="fs-4">Trudne zmiany w trakcie bloków treningowych</span>
+                        </div>
+
+                        <div class="y-center-left">
+                            <span class="material-ico fs-1 text-danger">close</span>
+                            <span class="fs-4">Tryb treningowy</span>
+                        </div>
+
+                        <div class="y-center-left">
+                            <span class="material-ico fs-1 text-danger">close</span>
+                            <span class="fs-4">Elastyczność</span>
+                        </div>
+                        
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6   p-3">
+                <div class="bg-white h-100 rounded p-4">
+                    <div class="fs-3 text-center title-yellow fw-bold">
+                        NoteGym
+                    </div>
+                    <div>
+
+                        <div class="y-center-left">
+                            <span class="material-ico fs-1 text-success">done</span>
+                            <span class="fs-4">Doskonała obserwacja</span>
+                        </div>
+                        
+                        <div class="y-center-left">
+                            <span class="material-ico fs-1 text-success">done</span>
+                            <span class="fs-4">Rozbudowe statystyki</span>
+                        </div>
+                        
+                        <div class="y-center-left">
+                            <span class="material-ico fs-1 text-success">done</span>
+                            <span class="fs-4">Łatwe układanie jadłospisów oraz eksport list zakupowych</span>
+                        </div>
+
+                        <div class="y-center-left">
+                            <span class="material-ico fs-1 text-success">done</span>
+                            <span class="fs-4">Łatwe zmiany w trakcie bloków treningowych</span>
+                        </div>
+
+                        <div class="y-center-left">
+                            <span class="material-ico fs-1 text-success">done</span>
+                            <span class="fs-4">Tryb treningowy</span>
+                        </div>
+
+                        <div class="y-center-left">
+                            <span class="material-ico fs-1 text-success">done</span>
+                            <span class="fs-4">Elastyczność</span>
+                        </div>
+                        
+
+                    </div>
+                </div>
+            </div>
+   
+
+        </div>
+
+    </div>
+
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="bangers fs-1 text-center">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container mt-5 mb-5">
+
+    </div>
+
+
+<script>
+    // icons swap logic 
+    let intervalID = window.setInterval(changeIco, 3000)
+    const ico0 = document.getElementById('ico0')
+    const ico1 = document.getElementById('ico1')
+    const ico2 = document.getElementById('ico2')
+    const ico3 = document.getElementById('ico3')
+
+    // ico 0 fix first swap
+    setTimeout(
+        function() {
+            ico0.classList.add('animate__fadeOut')
+        }, 1500);
+    
+    let counter = 0
+
+    function changeIco() {
+        ico0.style.display = 'none'
+        ico1.style.display = 'none'
+        ico2.style.display = 'none'
+        ico3.style.display = 'none'
+
+        ico0.classList.remove('animate__fadeIn')
+        ico1.classList.remove('animate__fadeIn')
+        ico2.classList.remove('animate__fadeIn')
+        ico3.classList.remove('animate__fadeIn')
+        ico0.classList.remove('animate__fadeOut')
+        ico1.classList.remove('animate__fadeOut')
+        ico2.classList.remove('animate__fadeOut')
+        ico3.classList.remove('animate__fadeOut')
+
+        counter++;
+
+        let current_ico = document.getElementById('ico'+(counter%4).toString())
+        current_ico.style.display = 'block'
+        
+        current_ico.classList.add('animate__fadeIn')
+        setTimeout(
+            function() {
+                current_ico.classList.add('animate__fadeOut')
+            }, 1500);
+        
+
+        
+    }
+</script>  
+
+{% endblock %}

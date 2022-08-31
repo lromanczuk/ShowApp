@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% block code %}
+
+<div class="auth-form-container x-center y-center">
+    <div class="col-1">
+        
+    </div>
+    <div class="col-xl-3"></div>
+    <div class="col-xl-4">
+        <div class="auth-form bg-white p-5 rounded">
+            <div class="row text-center">
+                <div class="col-12">
+                    <a class="navbar-brand fw-bold fs-2 y-center" href="{{ url_for('homepage.home') }}">
+                        <span class="material-ico fs-1">sports_gymnastics</span>
+                        NoteGym 
+                    </a>
+                </div>
+                <form method="POST" id="this_form">
+                    <div class="col-12 input-description">Adres Email</div>
+                    <div class="col-12">
+                        
+                        {{ form.csrf_token }}
+                        {{ form.email(class="auth-input") }}
+                    </div>
+
+                    <div class="col-12 input-description">Hasło</div>
+                    <div class="col-12">
+                        {{ form.password1(class="auth-input", id="password1") }}
+                    </div>
+
+                    <div class="col-12 input-description">Powtórz Hasło</div>
+                    <div class="col-12">
+                        {{ form.password2(class="auth-input", id="password2", oninput="samePasswordValidator(this)") }}
+                    </div>
+
+                    <div class="col-12">
+                        <button class="g-recaptcha btn-custom-yellow-auth" type="submit" formvalidate
+                        data-sitekey="{{ get_recaptcha_public_key() }}" 
+                        data-callback='onSubmit' 
+                        data-action='submit'>Załóż konto</button>
+                        
+                    </div>
+                </form>
+
+                <div class="col-6 mt-4"><a href="#" class="btn-custom-black-link text-start"></a></div>
+
+                <div class="col-6 mt-4"><a href="{{url_for('auth.login')}}" class="btn-custom-black-link text-end">Zaloguj się</a></div>
+            
+
+
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3"></div>
+    <div class="col-1">
+    </div>
+    
+ 
+</div>
+
+
+
+<script>
+
+    let password1 = document.getElementById('password1')
+    let password2 = document.getElementById('password2')
+
+    // captcha 3
+    function onSubmit(token) {
+        let form = document.getElementById("this_form")
+        if (form.checkValidity()) {
+            document.getElementById("this_form").submit();
+        } else {
+            form.reportValidity();
+        }
+    }
+
+    function samePasswordValidator(input) {
+        console.log('check!')
+
+        if (input.value != document.getElementById('password1').value) {
+            input.setCustomValidity("Hasła nie są takie same");
+            return false;
+        } else {
+            // input is valid -- reset the error message
+            input.setCustomValidity('');
+            return true;
+        }
+    }
+
+    // 
+  </script>
+{% endblock %}
